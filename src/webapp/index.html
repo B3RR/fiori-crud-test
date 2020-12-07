@@ -2,24 +2,20 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Quickstart</title>
+    <title>fiori crud test</title>
     <script
       id="sap-ui-bootstrap"
-      src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js"
+      src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js?v=12321"
       data-sap-ui-theme="sap_belize"
+      data-sap-ui-compatVersion="edge"
       data-sap-ui-libs="sap.m, sap.ui.layout, sap.tnt"
-      data-sap-ui-resourceroots='{"Quickstart": "./"}'
+      data-sap-ui-oninit="module:sap/ui/core/ComponentSupport"
+      data-sap-ui-resourceroots='{"gonis.fiori-crud-test": "./"}'
       data-sap-ui-async="true"
     ></script>
-    <script>
-      sap.ui.getCore().attachInit(function () {
-        sap.ui.require(["sap/ui/core/mvc/XMLView"], function (XMLView) {
-          XMLView.create({ viewName: "Quickstart.App" }).then(function (oView) {
-            oView.placeAt("content");
-          });
-        });
-      });
-    </script>
+
   </head>
-  <body class="sapUiBody" id="content"></body>
+  <body class="sapUiBody" id="content">
+      <div data-sap-ui-component data-name="gonis.fiori-crud-test" data-id="container" data-settings='{"id" : "fiori-crud-test"}'></div>
+  </body>
 </html>

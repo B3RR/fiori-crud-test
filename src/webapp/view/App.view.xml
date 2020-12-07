@@ -1,0 +1,23 @@
+<mvc:View
+   controllerName="gonis.fiori-crud-test.controller.App"
+   xmlns="sap.m"
+   xmlns:mvc="sap.ui.core.mvc"
+     displayBlock="true">
+    <Shell>
+		<App class="myAppDemoWT">
+			<pages>
+				<Page title="{i18n>homePageTitle}">
+					<headerContent>
+						<Button
+							icon="sap-icon://hello-world"
+							press=".onOpenDialog"/>
+					</headerContent>
+                    <content>
+						<mvc:XMLView viewName="gonis.fiori-crud-test.view.HelloPanel"/>
+                        <mvc:XMLView viewName="gonis.fiori-crud-test.view.InvoiceList"/>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
