@@ -4,7 +4,7 @@
   "description": "Test application for CRUD operations",
   "main": "index.js",
   "scripts": {
-    "start": "http-server ./webapp",
+    "start": "ui5 serve --config=ui5.yaml  --open index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,8 +19,5 @@
   "bugs": {
     "url": "https://github.com/B3RR/fiori-crud-test/issues"
   },
-  "homepage": "https://github.com/B3RR/fiori-crud-test#readme",
-  "devDependencies": {
-    "http-server": "^0.12.3"
-  }
+  "homepage": "https://github.com/B3RR/fiori-crud-test#readme"
 }
