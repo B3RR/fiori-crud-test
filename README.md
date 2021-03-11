@@ -10,3 +10,13 @@ npm init
 ```
 npm start
 ```
+
+## Build
+```
+npm run-script build
+```
+
+## Run Build
+```
+npm run-script runbuild
+```
