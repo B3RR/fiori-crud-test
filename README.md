@@ -3,7 +3,7 @@
 ## Install
 ```
 npm install --global @ui5/cli
-npm init
+npm install
 ```
 
 ## Run
