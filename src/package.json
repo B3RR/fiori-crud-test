@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "ui5 serve --config=ui5.yaml  --open index.html",
-    "build": "ui5 build --config=ui5.yaml --clean-dest --a --dest dist",
+    "build": "ui5 build --config=ui5.yaml --clean-dest --a --dest dist --exclude-task=ui5-task-nwabap-deployer",
     "runbuild": "http-server ./dist",
+    "deploy": "ui5 build --include-task=ui5-task-nwabap-deployer",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,6 +24,15 @@
   },
   "homepage": "https://github.com/B3RR/fiori-crud-test#readme",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "http-server": "^0.12.3"
+  },
+  "devDependencies": {
+    "ui5-task-nwabap-deployer": "^1.0.15"
+  },
+  "ui5": {
+    "dependencies": [
+      "ui5-task-nwabap-deployer"
+    ]
   }
 }
