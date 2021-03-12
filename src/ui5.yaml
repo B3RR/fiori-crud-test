@@ -10,7 +10,19 @@ framework:
     - name: sap.tnt
     - name: sap.ui.layout
     - name: themelib_sap_belize
-    - name: themelib_sap_bluecrystal
-      optional: true
-    - name: themelib_sap_fiori_3
-      optional: true
+builder:
+  customTasks:
+  - name: ui5-task-nwabap-deployer
+    afterTask: generateVersionInfo
+    configuration: 
+      resources:
+        path: dist
+        pattern: "**/*.*"
+      ui5:
+        language: EN
+        package: $TMP
+        bspContainer: Z_GOP_UI5_TEST2
+        bspContainerText: OpenUI5 Test application
+        createTransport: false
+        transportNo: 
+        calculateApplicationIndex: true
